@@ -30,3 +30,15 @@
 
 - in the projectname/settings.py add to the installed apps - 'appname'
 - rerun the server with - 'python3 manage.py runserver'
+
+
+
+## Deployment Instructions
+
+- Create a new Heroku app
+- Add to cofig vars - Key: DISABLE_COLLECTSTATIC, Value: 1
+- In the project install gunicorn - 'pip3 install gunicorn'
+- update the requirements.txt
+- Create a Procfile containing - 'web: gunicorn projectname.wsgi'
+- In the project settings file, set DEBUG to False
+- in the project settings file, add to ALLOWED_HOSTS - '.herokuapp.com' (separate with a comma)
