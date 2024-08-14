@@ -1,1 +1,1 @@
-web: gunicorn CI-django-starter-project.wsgi
+web: gunicorn ci-django-starter-project.wsgi
